@@ -11,6 +11,11 @@ const DesktopWrapper = styled.div`
     `
 const Folders = styled.div`
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50vh;
+    padding: 20px;
 
     .groupContainer {
         display: flex;
@@ -35,6 +40,18 @@ class Desktop extends Component {
                     <div className="groupContainer">
                         <img className="folder" src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" />
                         <p>About</p>
+                    </div>
+                    <div className="groupContainer">
+                        <img className="folder" src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" />
+                        <p>Projects</p>
+                    </div>
+                    <div className="groupContainer">
+                        <img className="folder" src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" />
+                        <p>Archive</p>
+                    </div>
+                    <div className="groupContainer">
+                        <img className="folder" src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" />
+                        <p>Contact</p>
                     </div>
                 </Folders>
             </DesktopWrapper>
