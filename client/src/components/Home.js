@@ -19,13 +19,25 @@ const HomeWrapper = styled.div`
 `
 
 class Home extends Component {
+    state = {
+
+    }
+
+    openApplication = async (e) => {
+        console.log("opened")
+    }
+
+    closeApplication = async (e) => {
+
+    }
+    
     render() {
         return (
             <HomeWrapper>
                 
                 <Header />
 
-                <Desktop />
+                <Desktop openApplication={this.openApplication} closeApplication={this.closeApplication}/>
 
                 This is Home
 

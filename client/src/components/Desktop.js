@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const DesktopWrapper = styled.div`
     height: 100vh;
     width: 100vw;
-    `
+`
 const Folders = styled.div`
     color: white;
     display: flex;
@@ -29,31 +29,35 @@ const Folders = styled.div`
     }
 `
 
-class Desktop extends Component {
-    render() {
-        return (
-            <DesktopWrapper>
-                <Folders>
-                    <div className="groupContainer">
-                        <img className="folder" src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" />
-                        <p>About</p>
-                    </div>
-                    <div className="groupContainer">
-                        <img className="folder" src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" />
-                        <p>Projects</p>
-                    </div>
-                    <div className="groupContainer">
-                        <img className="folder" src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" />
-                        <p>Archive</p>
-                    </div>
-                    <div className="groupContainer">
-                        <img className="folder" src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" />
-                        <p>Contact</p>
-                    </div>
-                </Folders>
-            </DesktopWrapper>
-        );
+const Desktop = (props) => {
+
+    const openApplication = (e) => {
+        e.preventDefault()
+        this.props.openApplication();
     }
+    
+    return (
+        <DesktopWrapper>
+            <Folders>
+                <div className="groupContainer">
+                    <img className="folder" onClick={this.openApplication} src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" />
+                    <p>About</p>
+                </div>
+                <div className="groupContainer">
+                    <img className="folder" src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" />
+                    <p>Projects</p>
+                </div>
+                <div className="groupContainer">
+                    <img className="folder" src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" />
+                    <p>Archive</p>
+                </div>
+                <div className="groupContainer">
+                    <img className="folder" src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" />
+                    <p>Contact</p>
+                </div>
+            </Folders>
+        </DesktopWrapper>
+    );
 }
 
 export default Desktop;

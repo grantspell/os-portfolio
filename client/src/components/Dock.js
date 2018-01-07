@@ -14,6 +14,20 @@ const DockWrapper = styled.div`
 
     .icon {
         height: 50px;
+        transition: padding-bottom .25s;
+    }
+    .applicationText {
+        visibility: hidden;
+        background-color: rgba(0,0,0,7);
+        color: white;
+        text-align: center;
+        border-radius: 5px;
+    }
+    .icon:hover {
+        padding-bottom: 20px;
+    }
+    .icon:hover .applicationText {
+        visibility: visible;
     }
 `
 
@@ -22,12 +36,15 @@ const Dock = () => {
         <DockWrapper>
             <div>
                 <img className="icon" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-512.png" />
+                {/* <p className="applicationText">LinkedIn</p> */}
             </div>
             <div>
                 <img className="icon" src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" />
+                {/* <p className="applicationText">GitHub</p> */}
             </div>
             <div>
                 <img className="icon" src="https://cdn1.iconfinder.com/data/icons/business-seo-vol-1/512/CV_Contract_Agreement_Resume_Paper_Document-512.png" />
+                {/* <p className="applicationText">Resumé</p> */}
             </div>
         </DockWrapper>
     );
