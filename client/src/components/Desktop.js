@@ -5,9 +5,6 @@ import styled from 'styled-components'
 const DesktopWrapper = styled.div`
     height: 100vh;
     width: 100vw;
-    z-index: -1;
-    background-color: black;
-
     `
 const Folders = styled.div`
     color: white;

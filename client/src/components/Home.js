@@ -14,6 +14,8 @@ const HomeWrapper = styled.div`
     align-items: center;
     height: 100vh;
     width: 100vw;
+    background: url(http://512pixels.net/downloads/macos-wallpapers/10-5.png);
+    background-size: cover;
 `
 
 class Home extends Component {
