@@ -39,7 +39,7 @@ const WindowTop = styled.div`
 `
 const WindowLeft = styled.div`
     height: 315px;
-    width: 15vw;
+    width: 25%;
     border-radius: 0px 0px 0px 3px;
     background-color: #F0F0F0;
 `
