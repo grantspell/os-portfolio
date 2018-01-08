@@ -10,6 +10,7 @@ const DesktopWrapper = styled.div`
     width: 100vw;
     display: flex;
     justify-content: space-between;
+    font-family: 'Arimo', sans-serif;
 `
 const Folders = styled.div`
     color: white;

@@ -8,6 +8,7 @@ const WindowsWrapper = styled.div`
     border-radius: 5px;
     margin: 100px;
     box-shadow: 0px 0px 100px rgba(0,0,0,.5);
+    font-family: 'Arimo', sans-serif;
 `
 const WindowTop = styled.div`
     height: 35px;
@@ -30,7 +31,7 @@ const WindowTop = styled.div`
     button:hover {
         color: black;
     }
-    h1 {
+    p {
         font-size: 12px;
         color: black;
         text-align: center;
@@ -87,7 +88,7 @@ const Windows = (props) => {
         <WindowsWrapper>
             <WindowTop>
                 <button onClick={closeApplication}>X</button>
-                <h1>{props.appName}</h1>
+                <p>{props.appName}</p>
             </WindowTop>
 
             <WindowBottom>
