@@ -72,9 +72,9 @@ const WindowRight = styled.div`
 
 const Windows = (props) => {
 
-    const switchApplication = (e, name) => {
+    const switchApplication = (e) => {
         e.preventDefault();
-        props.switchApplication(e, name);
+        props.switchApplication(e);
     }
     
     const closeApplication = (e) => {

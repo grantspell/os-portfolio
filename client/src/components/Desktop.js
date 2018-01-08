@@ -41,7 +41,7 @@ const Desktop = (props) => {
         props.openApplication(e);
     }
 
-    const switchApplication = (e, name) => {
+    const switchApplication = (e) => {
         const appName = e.target.name
         console.log(appName)
         props.switchApplication(appName);
