@@ -5,13 +5,14 @@ import styled from 'styled-components'
 const WindowsWrapper = styled.div`
     height: 350px;
     width: 500px;
-    border-radius: 3px;
+    border-radius: 5px;
     margin: 100px;
+    box-shadow: 0px 0px 100px rgba(0,0,0,.5);
 `
 const WindowTop = styled.div`
     height: 35px;
     width: 100%;
-    border-radius: 3px 3px 0px 0px;
+    border-radius: 5px 5px 0px 0px;
     background: linear-gradient(#EEEEEE, #D0D0D0);
     display: flex;
     align-items: center;
@@ -44,13 +45,13 @@ const WindowBottom = styled.div`
 const WindowLeft = styled.div`
     height: 315px;
     width: 25%;
-    border-radius: 0px 0px 0px 3px;
+    border-radius: 0px 0px 0px 5px;
     background-color: rgba(240, 240, 240, .9);
 `
 const WindowRight = styled.div`
     height: 315px;
     width: 450px;
-    border-radius: 0px 0px 3px 0px;
+    border-radius: 0px 0px 5px 0px;
     background-color: #FFFFFF;
     flex-wrap: wrap;
 
