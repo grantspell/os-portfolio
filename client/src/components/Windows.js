@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 //STYLING
@@ -103,8 +103,8 @@ const Windows = (props) => {
                 <WindowRight className={props.appName}>
                     {props.projects.map(project => (
                         <div className="projectContainer" key={project.id} id={project._id}>
-                            <a href={project.liveURL} target="_blank" >
-                                <img className="projectIcon" src={project.iconURL} />
+                            <a href={project.liveURL} target="_blank" rel="noopener noreferrer" >
+                                <img className="projectIcon" src={project.iconURL} alt={project.name} />
                                 <p>{project.name}</p>
                             </a>
                         </div>

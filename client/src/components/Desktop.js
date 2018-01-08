@@ -56,19 +56,19 @@ const Desktop = (props) => {
         <DesktopWrapper>
             <Folders>
                 <div className="groupContainer">
-                    <img className="folder" onClick={openApplication} name="about" src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" />
+                    <img className="folder" onClick={openApplication} name="about" src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" alt="About Folder"/>
                     <p>About</p>
                 </div>
                 <div className="groupContainer">
-                    <img className="folder" onClick={openApplication} name="projects" src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" />
+                    <img className="folder" onClick={openApplication} name="projects" src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" alt="Projects Folder"/>
                     <p>Projects</p>
                 </div>
                 <div className="groupContainer">
-                    <img className="folder" onClick={openApplication} name="archive" src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" />
+                    <img className="folder" onClick={openApplication} name="archive" src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" alt="Archive Folder"/>
                     <p>Archive</p>
                 </div>
                 <div className="groupContainer">
-                    <img className="folder" onClick={openApplication} name="contact" src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" />
+                    <img className="folder" onClick={openApplication} name="contact" src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" alt="Contact Folder"/>
                     <p>Contact</p>
                 </div>
             </Folders>

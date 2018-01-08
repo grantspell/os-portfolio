@@ -35,15 +35,15 @@ const Dock = () => {
     return (
         <DockWrapper>
             <div>
-                <a href="https://www.linkedin.com/in/grantspell/" target="_blank"><img className="icon" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-512.png" /></a>
+                <a href="https://www.linkedin.com/in/grantspell/" target="_blank" rel="noopener noreferrer"><img className="icon" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-512.png" alt="LinkedIn"/></a>
                 {/* <p className="applicationText">LinkedIn</p> */}
             </div>
             <div>
-                <a href="https://github.com/grantspell" target="_blank"><img className="icon" src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" /></a>
+                <a href="https://github.com/grantspell" target="_blank" rel="noopener noreferrer"><img className="icon" src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" alt="GitHub"/></a>
                 {/* <p className="applicationText">GitHub</p> */}
             </div>
             <div>
-                <a href="https://drive.google.com/file/d/1Kl7Eex8_srwgSYDspyKkdRtiHNkXSVWA/view" target="_blank"><img className="icon" src="https://cdn1.iconfinder.com/data/icons/business-seo-vol-1/512/CV_Contract_Agreement_Resume_Paper_Document-512.png" /></a>
+                <a href="https://drive.google.com/file/d/1Kl7Eex8_srwgSYDspyKkdRtiHNkXSVWA/view" target="_blank" rel="noopener noreferrer"><img className="icon" src="https://cdn1.iconfinder.com/data/icons/business-seo-vol-1/512/CV_Contract_Agreement_Resume_Paper_Document-512.png" alt="Resumé"/></a>
                 {/* <p className="applicationText">Resumé</p> */}
             </div>
         </DockWrapper>
