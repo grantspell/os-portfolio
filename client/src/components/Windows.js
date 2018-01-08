@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 //STYLING
 const WindowsWrapper = styled.div`
-    height: 500px;
-    width: 300px;
+    height: 350px;
+    width: 500px;
     background-color: white;
     border-radius: 3px;
     margin: 100px;
