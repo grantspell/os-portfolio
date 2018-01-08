@@ -1,10 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
+
+// COMPONENTS
+import Windows from './Windows'
 
 // STYLING
 const DesktopWrapper = styled.div`
     height: 100vh;
     width: 100vw;
+    display: flex;
+    justify-content: space-between;
 `
 const Folders = styled.div`
     color: white;
@@ -32,30 +37,38 @@ const Folders = styled.div`
 const Desktop = (props) => {
 
     const openApplication = (e) => {
-        e.preventDefault()
-        this.props.openApplication();
+        e.preventDefault();
+        props.openApplication(e);
     }
-    
+
+    const closeApplication = (e) => {
+        e.preventDefault();
+        props.closeApplication(e);
+    }
+
     return (
         <DesktopWrapper>
             <Folders>
                 <div className="groupContainer">
-                    <img className="folder" onClick={this.openApplication} src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" />
+                    <img className="folder" onClick={openApplication} name="about" src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" />
                     <p>About</p>
                 </div>
                 <div className="groupContainer">
-                    <img className="folder" src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" />
+                    <img className="folder" onClick={openApplication} name="projects" src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" />
                     <p>Projects</p>
                 </div>
                 <div className="groupContainer">
-                    <img className="folder" src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" />
+                    <img className="folder" onClick={openApplication} name="archive" src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" />
                     <p>Archive</p>
                 </div>
                 <div className="groupContainer">
-                    <img className="folder" src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" />
+                    <img className="folder" onClick={openApplication} name="contact" src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" />
                     <p>Contact</p>
                 </div>
             </Folders>
+
+            {props.windowOpen ? <Windows closeApplication={closeApplication} appName={props.appName} /> : null}
+
         </DesktopWrapper>
     );
 }
