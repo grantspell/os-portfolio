@@ -88,7 +88,7 @@ const Windows = (props) => {
         <WindowsWrapper>
             <WindowTop>
                 <button onClick={closeApplication}>X</button>
-                <p>{props.appName}</p>
+                <p><i class="material-icons">folder</i>{props.appName}</p>
             </WindowTop>
 
             <WindowBottom>
