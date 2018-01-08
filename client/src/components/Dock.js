@@ -35,15 +35,15 @@ const Dock = () => {
     return (
         <DockWrapper>
             <div>
-                <img className="icon" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-512.png" />
+                <a href="https://www.linkedin.com/in/grantspell/" target="_blank"><img className="icon" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-512.png" /></a>
                 {/* <p className="applicationText">LinkedIn</p> */}
             </div>
             <div>
-                <img className="icon" src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" />
+                <a href="https://github.com/grantspell" target="_blank"><img className="icon" src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" /></a>
                 {/* <p className="applicationText">GitHub</p> */}
             </div>
             <div>
-                <img className="icon" src="https://cdn1.iconfinder.com/data/icons/business-seo-vol-1/512/CV_Contract_Agreement_Resume_Paper_Document-512.png" />
+                <a href="https://drive.google.com/file/d/1Kl7Eex8_srwgSYDspyKkdRtiHNkXSVWA/view" target="_blank"><img className="icon" src="https://cdn1.iconfinder.com/data/icons/business-seo-vol-1/512/CV_Contract_Agreement_Resume_Paper_Document-512.png" /></a>
                 {/* <p className="applicationText">Resumé</p> */}
             </div>
         </DockWrapper>
