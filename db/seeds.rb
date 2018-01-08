@@ -1,1 +1,1 @@
-Project.create({ name: "Dilettante", liveURL: "http://project-four.heroku.com", githubURL: "n/a", previewURL: "n/a" })
+Project.create({ name: "Dilettante", liveURL: "http://project-four.heroku.com", githubURL: "n/a", previewURL: "n/a", iconURL: "http://icongal.com/gallery/image/9172/document_text_file_txt.png" })

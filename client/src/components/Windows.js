@@ -5,7 +5,6 @@ import styled from 'styled-components'
 const WindowsWrapper = styled.div`
     height: 350px;
     width: 500px;
-    background-color: white;
     border-radius: 3px;
     margin: 100px;
 `
@@ -37,21 +36,47 @@ const WindowTop = styled.div`
         width: 100%;
     }
 `
+const WindowBottom = styled.div`
+    display: flex;
+    height: 100%;
+    width: 100%;
+`
 const WindowLeft = styled.div`
     height: 315px;
     width: 25%;
     border-radius: 0px 0px 0px 3px;
-    background-color: #F0F0F0;
+    background-color: rgba(240, 240, 240, .9);
 `
 const WindowRight = styled.div`
     height: 315px;
     width: 450px;
     border-radius: 0px 0px 3px 0px;
-    float: right;
+    background-color: #FFFFFF;
+    flex-wrap: wrap;
+
+    .projectContainer {
+        display: flex;
+        flex-direction: column;
+        width: 80px;
+        align-items: center;
+        margin: 10px;
+
+        p {
+            margin: 3px;
+        }
+    }
+    .projectIcon {
+        height: 70px;
+    }
 `
 
 const Windows = (props) => {
 
+    const switchApplication = (e, name) => {
+        e.preventDefault();
+        props.switchApplication(e, name);
+    }
+    
     const closeApplication = (e) => {
         e.preventDefault();
         props.closeApplication(e);
@@ -64,12 +89,28 @@ const Windows = (props) => {
                 <h1>{props.appName}</h1>
             </WindowTop>
 
-            <WindowLeft>
-                L
-            </WindowLeft>
+            <WindowBottom>
+                <WindowLeft>
+                    <label htmlFor="folders">Folders</label>
+                    <ul>
+                        <li onClick={switchApplication} name="about">About</li>
+                        <li onClick={switchApplication} name="projects">Projects</li>
+                        <li onClick={switchApplication} name="archive">Archive</li>
+                        <li onClick={switchApplication} name="contact">Contact</li>
+                    </ul>
+                </WindowLeft>
 
-            <WindowRight className={props.appName}>
-            </WindowRight>
+                <WindowRight className={props.appName}>
+                    {props.projects.map(project => (
+                        <div className="projectContainer" key={project.id} id={project._id}>
+                            <a href={project.liveURL} target="_blank" >
+                                <img className="projectIcon" src={project.iconURL} />
+                                <p>{project.name}</p>
+                            </a>
+                        </div>
+                    ))}
+                </WindowRight>
+            </WindowBottom>
         </WindowsWrapper>
     );
 }

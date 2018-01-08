@@ -41,6 +41,12 @@ const Desktop = (props) => {
         props.openApplication(e);
     }
 
+    const switchApplication = (e, name) => {
+        const appName = e.target.name
+        console.log(appName)
+        props.switchApplication(appName);
+    }
+
     const closeApplication = (e) => {
         e.preventDefault();
         props.closeApplication(e);
@@ -67,7 +73,7 @@ const Desktop = (props) => {
                 </div>
             </Folders>
 
-            {props.windowOpen ? <Windows closeApplication={closeApplication} appName={props.appName} /> : null}
+            {props.windowOpen ? <Windows switchApplication={switchApplication} closeApplication={closeApplication} appName={props.appName} projects={props.projects} /> : null}
 
         </DesktopWrapper>
     );

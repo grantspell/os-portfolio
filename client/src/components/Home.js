@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 import styled from 'styled-components'
 
 // COMPONENTS
@@ -21,12 +22,23 @@ const HomeWrapper = styled.div`
 class Home extends Component {
     state = {
         windowOpen: false,
-        appName: ''
+        appName: '',
+        projects: [],
     }
 
+    componentWillMount = async () => {
+        const res = await axios.get('/api/projects')
+        this.setState({ projects: res.data })        
+    }
+    
     openApplication = async (e) => {
         const name = e.target.name
         await this.setState({ windowOpen: true, appName: name })
+        console.log(this.state)
+    }
+
+    switchApplication = async (appName) => {
+        await this.setState({ appName: appName })
         console.log(this.state)
     }
 
@@ -42,7 +54,14 @@ class Home extends Component {
                 
                 <Header />
 
-                <Desktop openApplication={this.openApplication} closeApplication={this.closeApplication} windowOpen={this.state.windowOpen} appName={this.state.appName} />
+                <Desktop
+                    openApplication={this.openApplication}
+                    switchApplication={this.switchApplication}
+                    closeApplication={this.closeApplication}
+                    windowOpen={this.state.windowOpen}
+                    appName={this.state.appName}
+                    projects={this.state.projects}
+                />
 
                 <Dock />
                 

@@ -1,24 +1,6 @@
-# README
+# OS PORTFOLIO
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Designed to simulate Mac OS by Apple
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Deployed Link
+### [OS Portfolio](http://stormy-wave-83010.herokuapp.com/)
