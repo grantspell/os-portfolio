@@ -47,7 +47,7 @@ const WindowLeft = styled.div`
     height: 315px;
     width: 25%;
     border-radius: 0px 0px 0px 5px;
-    background-color: rgba(240, 240, 240, .9);
+    background-color: rgba(240, 240, 240, .95);
 `
 const WindowRight = styled.div`
     height: 315px;
