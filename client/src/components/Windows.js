@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
+// COMPONENTS
+import Projects from './windows/Projects'
+
 //STYLING
 const WindowsWrapper = styled.div`
     height: 350px;
@@ -78,12 +81,14 @@ const Windows = (props) => {
         e.preventDefault();
         props.switchApplication(e);
     }
-    
+
     const closeApplication = (e) => {
         e.preventDefault();
         props.closeApplication(e);
     }
-    
+
+    const appName = props.appName;
+
     return (
         <WindowsWrapper>
             <WindowTop>
@@ -103,14 +108,9 @@ const Windows = (props) => {
                 </WindowLeft>
 
                 <WindowRight className={props.appName}>
-                    {props.projects.map(project => (
-                        <div className="projectContainer" key={project.id} id={project._id}>
-                            <a href={project.liveURL} target="_blank" rel="noopener noreferrer" >
-                                <img className="projectIcon" src={project.iconURL} alt={project.name} />
-                                <p>{project.name}</p>
-                            </a>
-                        </div>
-                    ))}
+
+                    {props.appName === "projects" ? <Projects projects={props.projects} /> : null}
+
                 </WindowRight>
             </WindowBottom>
         </WindowsWrapper>
