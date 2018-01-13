@@ -35,7 +35,13 @@ const Folders = styled.div`
     }
 
     @media (max-width: 1050px) {
-        height: 30vh;
+        height: 100vh;
+        justify-content: flex-start;
+        padding: 0px;
+        
+        .groupContainer {
+            margin: 20px;
+        }
     }
 `
 
