@@ -23,7 +23,7 @@ const Folders = styled.div`
     .groupContainer {
         display: flex;
         flex-direction: column;
-        width: 80px;
+        width: 70px;
         align-items: center;
 
         p {
@@ -31,7 +31,11 @@ const Folders = styled.div`
         }
     }
     .folder {
-        height: 80px;
+        height: 70px;
+    }
+
+    @media (max-width: 1050px) {
+
     }
 `
 
