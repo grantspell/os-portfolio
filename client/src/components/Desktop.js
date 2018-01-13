@@ -35,7 +35,7 @@ const Folders = styled.div`
     }
 
     @media (max-width: 1050px) {
-
+        height: 30vh;
     }
 `
 

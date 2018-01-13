@@ -12,6 +12,11 @@ const WindowsWrapper = styled.div`
     margin: 100px;
     box-shadow: 0px 0px 100px rgba(0,0,0,.5);
     font-family: 'Arimo', sans-serif;
+
+    @media (max-width: 1050px) {
+        height: 80vh;
+        width: 80vw;
+    }
 `
 const WindowTop = styled.div`
     height: 35px;
@@ -49,6 +54,10 @@ const WindowTop = styled.div`
         text-align: center;
         margin-left: 4px;
     }
+
+    @media (max-width: 1050px) {
+        height: 3%;        
+    }
     `
 const WindowBottom = styled.div`
     display: flex;
@@ -73,6 +82,10 @@ const WindowLeft = styled.div`
     .appList i {
         margin: 0px 4px 0px 10px;
     }
+
+    @media (max-width: 1050px) {
+        height: 95%;
+    }
 `
 const WindowRight = styled.div`
     height: 315px;
@@ -94,6 +107,11 @@ const WindowRight = styled.div`
     }
     .projectIcon {
         height: 70px;
+    }
+
+    @media (max-width: 1050px) {
+        height: 95%;
+        width: 100%;
     }
 `
 
