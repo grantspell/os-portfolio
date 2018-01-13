@@ -36,11 +36,18 @@ const WindowTop = styled.div`
     .closeButton:hover {
         color: black;
     }
+    .Header {
+        width: 100%;
+        display: flex;
+        flex-direction: columns;
+        justify-content: center;
+        align-items: center;
+    }
     p {
         font-size: 12px;
         color: black;
         text-align: center;
-        width: 100%;
+        margin-left: 4px;
     }
     `
 const WindowBottom = styled.div`
@@ -110,7 +117,10 @@ const Windows = (props) => {
                 <div className="closeButton" onClick={closeApplication}>
                     x
                 </div>
-                <p><i class="material-icons">folder</i>{props.appName}</p>
+                <div className="Header">
+                    <i class="material-icons">folder</i>
+                    <p>{props.appName}</p>
+                </div>
             </WindowTop>
 
             <WindowBottom>
