@@ -51,6 +51,19 @@ const WindowLeft = styled.div`
     width: 25%;
     border-radius: 0px 0px 0px 5px;
     background-color: rgba(240, 240, 240, .95);
+    display: flex;
+    flex-direction: column;
+
+    .appList {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 18px;
+        width: 100%;
+    }
+    .appList i {
+        margin: 0px 4px 0px 10px;
+    }
 `
 const WindowRight = styled.div`
     height: 315px;
@@ -98,13 +111,31 @@ const Windows = (props) => {
 
             <WindowBottom>
                 <WindowLeft>
-                    <label htmlFor="folders">Folders</label>
-                    <ul>
-                        <li onClick={switchApplication} name="about">About</li>
-                        <li onClick={switchApplication} name="projects">Projects</li>
-                        <li onClick={switchApplication} name="archive">Archive</li>
-                        <li onClick={switchApplication} name="contact">Contact</li>
-                    </ul>
+                    
+                    <div className="foldersLabel">
+                        <p>Folders</p>
+                    </div>
+
+                    <div onClick={switchApplication} name="About" className="appList">
+                        <i class="material-icons">folder</i>
+                        <p>About</p>
+                    </div>
+
+                    <div onClick={switchApplication} name="Projects" className="appList">
+                        <i class="material-icons">folder</i>
+                        <p>Projects</p>
+                    </div>
+
+                    <div onClick={switchApplication} name="Archive" className="appList">
+                        <i class="material-icons">folder</i>
+                        <p>Archive</p>
+                    </div>
+
+                    <div onClick={switchApplication} name="Contact" className="appList">
+                        <i class="material-icons">folder</i>
+                        <p>Contact</p>
+                    </div>
+
                 </WindowLeft>
 
                 <WindowRight className={props.appName}>
