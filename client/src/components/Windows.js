@@ -21,17 +21,19 @@ const WindowTop = styled.div`
     display: flex;
     align-items: center;
     
-    button {
+    .closeButton {
         color: red;
         background-color: red;
         margin-left: 10px;
-        border-radius: 100%;
-        border: none;
-        size: 10px;
-        font-size: 10px;
-        text-align: center;
+        border-radius: 50%;
+        width: 13px;
+        height: 13px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 11px;
     }
-    button:hover {
+    .closeButton:hover {
         color: black;
     }
     p {
@@ -40,7 +42,7 @@ const WindowTop = styled.div`
         text-align: center;
         width: 100%;
     }
-`
+    `
 const WindowBottom = styled.div`
     display: flex;
     height: 100%;
@@ -105,7 +107,9 @@ const Windows = (props) => {
     return (
         <WindowsWrapper>
             <WindowTop>
-                <button onClick={closeApplication}>X</button>
+                <div className="closeButton" onClick={closeApplication}>
+                    x
+                </div>
                 <p><i class="material-icons">folder</i>{props.appName}</p>
             </WindowTop>
 
