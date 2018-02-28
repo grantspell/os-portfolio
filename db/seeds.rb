@@ -1,5 +1,7 @@
 # Projects
 
+Project.destroy_all
+
 # Dilettante
 Project.create({
     name: "Dilettante",
