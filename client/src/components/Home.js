@@ -24,11 +24,16 @@ class Home extends Component {
         windowOpen: false,
         appName: '',
         projects: [],
+        archives: [],
     }
 
     componentWillMount = async () => {
-        const res = await axios.get('/api/projects')
-        this.setState({ projects: res.data })        
+        const projectsRes = await axios.get('/api/projects')
+        const archivesRes = await axios.get('/api/archives')
+        this.setState({
+            projects: projectsRes.data,
+            archives: archivesRes.data
+        })        
     }
     
     openApplication = async (e) => {
@@ -61,6 +66,7 @@ class Home extends Component {
                     windowOpen={this.state.windowOpen}
                     appName={this.state.appName}
                     projects={this.state.projects}
+                    archives={this.state.archives}
                 />
 
                 <Dock />

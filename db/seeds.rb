@@ -1,4 +1,4 @@
-# Projects
+# PROJECTS
 
 Project.destroy_all
 
@@ -16,6 +16,37 @@ Project.create({
     name: "Hangman",
     liveURL: "https://styx-hangman.bitballoon.com/",
     githubURL: "https://github.com/grantspell/project_one",
+    previewURL: "n/a",
+    iconURL: "http://icongal.com/gallery/image/9172/document_text_file_txt.png"
+})
+
+# ARCHIVES
+
+Archive.destroy_all
+
+# Brick Breaker
+Archive.create({
+    name: "Brick Breaker",
+    liveURL: "https://simple-js-game.bitballoon.com/",
+    githubURL: "n/a",
+    previewURL: "n/a",
+    iconURL: "http://icongal.com/gallery/image/9172/document_text_file_txt.png"
+})
+
+# Depreciated Portfolio I
+Archive.create({
+    name: "Depreciated Portfolio I",
+    liveURL: "https://intense-reaches-74583.herokuapp.com/",
+    githubURL: "https://github.com/grantspell/spell-portfolio",
+    previewURL: "n/a",
+    iconURL: "http://icongal.com/gallery/image/9172/document_text_file_txt.png"
+})
+
+# Depreciated Portfolio II
+Archive.create({
+    name: "Depreciated Portfolio II",
+    liveURL: "https://depreciated-portfolio.herokuapp.com/",
+    githubURL: "https://github.com/grantspell/new-portfolio-same-me",
     previewURL: "n/a",
     iconURL: "http://icongal.com/gallery/image/9172/document_text_file_txt.png"
 })

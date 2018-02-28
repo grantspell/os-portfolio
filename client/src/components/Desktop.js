@@ -84,7 +84,7 @@ const Desktop = (props) => {
                 </div>
             </Folders>
 
-            {props.windowOpen ? <Windows switchApplication={switchApplication} closeApplication={closeApplication} appName={props.appName} projects={props.projects} /> : null}
+            {props.windowOpen ? <Windows switchApplication={switchApplication} closeApplication={closeApplication} appName={props.appName} projects={props.projects} archives={props.archives} /> : null}
 
         </DesktopWrapper>
     );

@@ -187,7 +187,7 @@ const Windows = (props) => {
 
                     <WindowRight className={props.appName}>
 
-                        {props.appName === "about" ? <About /> : props.appName === "projects" ? <Projects projects={props.projects} /> : props.appName === "archive" ? <Archive /> : props.appName === "contact" ? <Contact /> : null}
+                        {props.appName === "about" ? <About /> : props.appName === "projects" ? <Projects projects={props.projects} /> : props.appName === "archive" ? <Archive archives={props.archives} /> : props.appName === "contact" ? <Contact /> : null}
 
                     </WindowRight>
                 </WindowBottom>
