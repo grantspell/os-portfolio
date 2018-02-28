@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Draggable from 'react-draggable'
 
 // COMPONENTS
 import About from './windows/About'
@@ -130,56 +131,68 @@ const Windows = (props) => {
         props.closeApplication(e);
     }
 
-    const appName = props.appName;
+    const eventLogger = (e: MouseEvent, data: Object) => {
+        console.log('Event: ', e);
+        console.log('Data: ', data);
+    }
 
     return (
-        <WindowsWrapper>
-            <WindowTop>
-                <div className="closeButton" onClick={closeApplication}>
-                    x
+        <Draggable
+            axis="both"
+            handle=".handle"
+            defaultPosition={{ x: 0, y: 0 }}
+            position={null}
+            onStart={this.handleStart}
+            onDrag={this.handleDrag}
+            onStop={this.handleStop}>
+            <WindowsWrapper>
+                <WindowTop className="handle">
+                    <div className="closeButton" onClick={closeApplication}>
+                        x
                 </div>
-                <div className="Header">
-                    <i class="material-icons">folder</i>
-                    <p>{props.appName}</p>
-                </div>
-            </WindowTop>
-
-            <WindowBottom>
-                <WindowLeft>
-                    
-                    <div className="foldersLabel">
-                        <p>Folders</p>
-                    </div>
-
-                    <div onClick={switchApplication} name="About" className="appList">
+                    <div className="Header">
                         <i class="material-icons">folder</i>
-                        <p>About</p>
+                        <p>{props.appName}</p>
                     </div>
+                </WindowTop>
 
-                    <div onClick={switchApplication} name="Projects" className="appList">
-                        <i class="material-icons">folder</i>
-                        <p>Projects</p>
-                    </div>
+                <WindowBottom>
+                    <WindowLeft>
 
-                    <div onClick={switchApplication} name="Archive" className="appList">
-                        <i class="material-icons">folder</i>
-                        <p>Archive</p>
-                    </div>
+                        <div className="foldersLabel">
+                            <p>Folders</p>
+                        </div>
 
-                    <div onClick={switchApplication} name="Contact" className="appList">
-                        <i class="material-icons">folder</i>
-                        <p>Contact</p>
-                    </div>
+                        <div onClick={switchApplication} name="About" className="appList">
+                            <i class="material-icons">folder</i>
+                            <p>About</p>
+                        </div>
 
-                </WindowLeft>
+                        <div onClick={switchApplication} name="Projects" className="appList">
+                            <i class="material-icons">folder</i>
+                            <p>Projects</p>
+                        </div>
 
-                <WindowRight className={props.appName}>
+                        <div onClick={switchApplication} name="Archive" className="appList">
+                            <i class="material-icons">folder</i>
+                            <p>Archive</p>
+                        </div>
 
-                    {props.appName === "about" ? <About /> : props.appName === "projects" ? <Projects projects={props.projects} /> : props.appName === "archive" ? <Archive /> : props.appName === "contact" ? <Contact /> : null}
+                        <div onClick={switchApplication} name="Contact" className="appList">
+                            <i class="material-icons">folder</i>
+                            <p>Contact</p>
+                        </div>
 
-                </WindowRight>
-            </WindowBottom>
-        </WindowsWrapper>
+                    </WindowLeft>
+
+                    <WindowRight className={props.appName}>
+
+                        {props.appName === "about" ? <About /> : props.appName === "projects" ? <Projects projects={props.projects} /> : props.appName === "archive" ? <Archive /> : props.appName === "contact" ? <Contact /> : null}
+
+                    </WindowRight>
+                </WindowBottom>
+            </WindowsWrapper>
+        </Draggable>
     );
 }
 
