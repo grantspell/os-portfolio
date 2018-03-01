@@ -12,14 +12,13 @@ const HeaderWrapper = styled.div`
     width: 100vw;
 `
 const Icon = styled.div`
-    margin-left: 20px;
+    margin: 0px 0px 0px 20px;
 `
 
 class Header extends Component {
     state = {
         icon: 'G',
         application: '',
-
     }
 
     render() {

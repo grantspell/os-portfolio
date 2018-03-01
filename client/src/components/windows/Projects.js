@@ -6,17 +6,30 @@ const ProjectsWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
 `
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+`
 
 const Projects = (props) => {
     return (
         <ProjectsWrapper>
             {props.projects.map(project => (
-                <div className="projectContainer" key={project.id} id={project._id}>
+                <Container className="projectContainer" key={project.id} id={project._id}>
                     <a href={project.liveURL} target="_blank" rel="noopener noreferrer" >
                         <img className="projectIcon" src={project.iconURL} alt={project.name} />
                         <p>{project.name}</p>
                     </a>
-                </div>
+                </Container>
             ))}
         </ProjectsWrapper>
     );

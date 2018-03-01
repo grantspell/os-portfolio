@@ -97,16 +97,20 @@ const WindowRight = styled.div`
     border-radius: 0px 0px 5px 0px;
     background-color: #FFFFFF;
     flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
 
     .projectContainer {
         display: flex;
         flex-direction: column;
         width: 80px;
+        justify-content: center;
         align-items: center;
         margin: 10px;
 
         p {
-            margin: 3px;
+            text-align: center;
         }
     }
     .projectIcon {
@@ -123,7 +127,11 @@ const Windows = (props) => {
 
     const switchApplication = (e) => {
         e.preventDefault();
-        props.switchApplication(e);
+
+        let application = e.target.value;
+        console.log(application);
+        debugger;
+        props.switchApplication(application);
     }
 
     const closeApplication = (e) => {
@@ -131,10 +139,6 @@ const Windows = (props) => {
         props.closeApplication(e);
     }
 
-    const eventLogger = (e: MouseEvent, data: Object) => {
-        console.log('Event: ', e);
-        console.log('Data: ', data);
-    }
 
     return (
         <Draggable
@@ -163,22 +167,22 @@ const Windows = (props) => {
                             <p>Folders</p>
                         </div>
 
-                        <div onClick={switchApplication} name="About" className="appList">
+                        <div onClick={switchApplication} value="about" className="appList">
                             <i class="material-icons">folder</i>
                             <p>About</p>
                         </div>
 
-                        <div onClick={switchApplication} name="Projects" className="appList">
+                        <div onClick={switchApplication} value="projects" className="appList">
                             <i class="material-icons">folder</i>
                             <p>Projects</p>
                         </div>
 
-                        <div onClick={switchApplication} name="Archive" className="appList">
+                        <div onClick={switchApplication} value="archive" className="appList">
                             <i class="material-icons">folder</i>
                             <p>Archive</p>
                         </div>
 
-                        <div onClick={switchApplication} name="Contact" className="appList">
+                        <div onClick={switchApplication} value="contact" className="appList">
                             <i class="material-icons">folder</i>
                             <p>Contact</p>
                         </div>

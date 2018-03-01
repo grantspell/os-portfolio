@@ -35,7 +35,7 @@ Archive.create({
 
 # Depreciated Portfolio I
 Archive.create({
-    name: "Depreciated Portfolio I",
+    name: "Portfolio V_01",
     liveURL: "https://intense-reaches-74583.herokuapp.com/",
     githubURL: "https://github.com/grantspell/spell-portfolio",
     previewURL: "n/a",
@@ -44,7 +44,7 @@ Archive.create({
 
 # Depreciated Portfolio II
 Archive.create({
-    name: "Depreciated Portfolio II",
+    name: "Portfolio V_02",
     liveURL: "https://depreciated-portfolio.herokuapp.com/",
     githubURL: "https://github.com/grantspell/new-portfolio-same-me",
     previewURL: "n/a",
