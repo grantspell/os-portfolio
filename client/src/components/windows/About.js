@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const AboutWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
+    padding: 0px 10px 10px 0px;
 `
 
 const About = () => {
