@@ -43,6 +43,9 @@ const Dock = () => {
                 {/* <p className="applicationText">GitHub</p> */}
             </div>
             <div>
+                <a href="mailto:spellGrant@gmail.com"><img className="icon" src="https://i.imgur.com/zlij372.png" alt="Email Me" /></a>
+            </div>
+            <div>
                 <a href="https://drive.google.com/file/d/1Kl7Eex8_srwgSYDspyKkdRtiHNkXSVWA/view" target="_blank" rel="noopener noreferrer"><img className="icon" src="https://cdn1.iconfinder.com/data/icons/business-seo-vol-1/512/CV_Contract_Agreement_Resume_Paper_Document-512.png" alt="Resumé"/></a>
                 {/* <p className="applicationText">Resumé</p> */}
             </div>
