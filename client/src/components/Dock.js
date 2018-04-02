@@ -29,6 +29,10 @@ const DockWrapper = styled.div`
     .icon:hover .applicationText {
         visibility: visible;
     }
+
+    @media (max-width: 1050px) {
+        width: 90vw;
+    }
 `
 
 const Dock = () => {
