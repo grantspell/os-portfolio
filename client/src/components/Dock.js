@@ -10,10 +10,11 @@ const DockWrapper = styled.div`
     color: white;
     border-radius: 5px 5px 0px 0px;
     height: 80px;
-    width: 600px;
+    width: auto;
 
     .icon {
         height: 50px;
+        margin: 0px 10px 0px 10px;
         transition: padding-bottom .25s;
     }
     .applicationText {
@@ -28,10 +29,6 @@ const DockWrapper = styled.div`
     }
     .icon:hover .applicationText {
         visibility: visible;
-    }
-
-    @media (max-width: 1050px) {
-        width: 90vw;
     }
 `
 

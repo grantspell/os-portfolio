@@ -37,6 +37,7 @@ const Folders = styled.div`
 
     @media (max-width: 1050px) {
         height: 100vh;
+        width: ;
         justify-content: flex-start;
         padding: 0px;
         
