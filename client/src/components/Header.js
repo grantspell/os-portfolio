@@ -10,17 +10,9 @@ const HeaderWrapper = styled.div`
     color: white;
     height: 20px;
     width: 100vw;
-
-    @media (max-width: 1050px) {
-        justify-content: center;
-    }
 `
 const Icon = styled.div`
     margin: 0px 0px 0px 20px;
-
-    @media (max-width: 1050px) {
-        margin: 0px;
-    }
 `
 
 class Header extends Component {
