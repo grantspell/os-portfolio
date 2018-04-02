@@ -9,7 +9,7 @@ const DesktopWrapper = styled.div`
     height: 100vh;
     width: 100vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     font-family: 'Arimo', sans-serif;
 `
 const Folders = styled.div`
