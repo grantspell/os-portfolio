@@ -182,10 +182,10 @@ const Windows = (props) => {
                             <p>Archive</p>
                         </div>
 
-                        <div onClick={switchApplication} value="contact" className="appList">
+                        {/* <div onClick={switchApplication} value="contact" className="appList">
                             <i class="material-icons">folder</i>
                             <p>Contact</p>
-                        </div>
+                        </div> */}
 
                     </WindowLeft>
 
