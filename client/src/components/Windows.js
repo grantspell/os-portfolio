@@ -18,8 +18,9 @@ const WindowsWrapper = styled.div`
     font-family: 'Arimo', sans-serif;
 
     @media (max-width: 1050px) {
-        height: 80vh;
-        width: 80vw;
+        height: 80%;
+        width: 95%;
+        margin: 10px;
     }
 `
 const WindowTop = styled.div`
@@ -60,12 +61,12 @@ const WindowTop = styled.div`
     }
 
     @media (max-width: 1050px) {
-        height: 3%;        
+        height: 4%;        
     }
     `
 const WindowBottom = styled.div`
     display: flex;
-    height: 100%;
+    height: 96%;
     width: 100%;
 `
 const WindowLeft = styled.div`
@@ -88,7 +89,8 @@ const WindowLeft = styled.div`
     }
 
     @media (max-width: 1050px) {
-        height: 95%;
+        height: 100%;
+        width: 30%;
     }
 `
 const WindowRight = styled.div`
@@ -118,8 +120,8 @@ const WindowRight = styled.div`
     }
 
     @media (max-width: 1050px) {
-        height: 95%;
-        width: 100%;
+        height: 100%;
+        width: 70%;
     }
 `
 

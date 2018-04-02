@@ -11,6 +11,10 @@ const DesktopWrapper = styled.div`
     display: flex;
     justify-content: flex-start;
     font-family: 'Arimo', sans-serif;
+
+    @media (max-width: 1050px) {
+        flex-direction: column;
+    }
 `
 const Folders = styled.div`
     color: white;
@@ -36,8 +40,8 @@ const Folders = styled.div`
     }
 
     @media (max-width: 1050px) {
-        height: 100vh;
-        width: ;
+        width: 100vw;
+        flex-direction: row;
         justify-content: flex-start;
         padding: 0px;
         
