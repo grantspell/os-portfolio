@@ -17,7 +17,7 @@ const Icon = styled.div`
 
 class Header extends Component {
     state = {
-        icon: 'G',
+        icon: 'Grant Spell',
         application: '',
     }
 
