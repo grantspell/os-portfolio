@@ -16,7 +16,7 @@ const Folders = styled.div`
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     height: 50vh;
     padding: 20px;
 
@@ -25,6 +25,7 @@ const Folders = styled.div`
         flex-direction: column;
         width: 70px;
         align-items: center;
+        margin: 10px 0px 10px 0px;
 
         p {
             margin: -5px;
@@ -78,10 +79,10 @@ const Desktop = (props) => {
                     <img className="folder" onClick={openApplication} name="archive" src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" alt="Archive Folder"/>
                     <p>Archive</p>
                 </div>
-                <div className="groupContainer">
+                {/* <div className="groupContainer">
                     <img className="folder" onClick={openApplication} name="contact" src="http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/256/Folder-icon.png" alt="Contact Folder"/>
                     <p>Contact</p>
-                </div>
+                </div> */}
             </Folders>
 
             {props.windowOpen ? <Windows switchApplication={switchApplication} closeApplication={closeApplication} appName={props.appName} projects={props.projects} archives={props.archives} /> : null}
