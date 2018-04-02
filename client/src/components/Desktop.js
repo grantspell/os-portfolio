@@ -14,6 +14,7 @@ const DesktopWrapper = styled.div`
 
     @media (max-width: 1050px) {
         flex-direction: column;
+        align-items: center;
     }
 `
 const Folders = styled.div`
@@ -41,6 +42,7 @@ const Folders = styled.div`
 
     @media (max-width: 1050px) {
         width: 100vw;
+        height: auto;
         flex-direction: row;
         justify-content: flex-start;
         padding: 0px;

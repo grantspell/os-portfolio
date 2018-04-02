@@ -61,12 +61,12 @@ const WindowTop = styled.div`
     }
 
     @media (max-width: 1050px) {
-        height: 4%;        
+        height: 5%;        
     }
     `
 const WindowBottom = styled.div`
     display: flex;
-    height: 96%;
+    height: 95%;
     width: 100%;
 `
 const WindowLeft = styled.div`
