@@ -40,7 +40,7 @@ const WToolBar = styled.div`
     border-bottom: .5px solid rgba(0,0,0, 0.245);
     `
 const TBTop = styled.div`
-    height: 30%;
+    height: 40%;
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -51,14 +51,17 @@ const TBTop = styled.div`
         width: 11px;
         background-color: rgba(255, 78, 78, 1);
         border-radius: 50%;
-        margin: 10px 0px 0px 10px;
+        margin: 0px 0px 0px 1%;
     }
     .status {
-        margin: 10px 0px 0px 45%;
+        margin: 0px 0px 0px 45%;
+        width: 50%;
+        display: flex;
+        align-items: center;
     }
 `
 const TBBottom = styled.div`
-    height: 70%;
+    height: 60%;
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -76,7 +79,7 @@ const TBBottom = styled.div`
         -webkit-transition-property: all;
         -webkit-transition-duration: .350s;
         transition-property: all;
-        transition-duration: .350 s;
+        transition-duration: .350s;
     }
     .searchInput:focus {
         text-align: left;
@@ -112,7 +115,7 @@ class Sandbox extends Component {
 
                                 <div className="closeButton"></div>
                                 
-                                <div className="status">grantspell</div>
+                                <div className="status"><i className="icon" class="material-icons">home</i><p>grantspell</p></div>
                                 
                             </TBTop>
 
