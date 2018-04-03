@@ -5,6 +5,9 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './components/Home'
 import Project from './components/Project'
 
+// SANDBOX COMPONENTS
+import Sandbox from './components/sandbox/Sandbox'
+
 class App extends Component {
   render () {
     return (
@@ -12,6 +15,7 @@ class App extends Component {
         <div>
           <Switch>
             <Route exact path="/" component={Home} />
+            <Route exact path="/sandbox" component={Sandbox} />
             <Route path="/:id" component={Project} />
           </Switch>
         </div>
