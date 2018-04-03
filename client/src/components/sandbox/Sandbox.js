@@ -16,7 +16,7 @@ const SandboxW = styled.div`
 const FinderWindow = styled.div`
     height: 433px;
     width: 770px;
-    border-radius: 5px;
+    border-radius: 4px;
     margin: 100px;
     box-shadow: 0px 20px 75px rgba(0,0,0,.5);
     font-family: 'Arimo', sans-serif;
@@ -36,8 +36,15 @@ const WToolBar = styled.div`
     width: 100%;
     background: linear-gradient(#EDEDED, #D0D0D0);
     border-radius: 4px 4px 0px 0px;
-    z-index: 999;
+    z-index: 998;
     border-bottom: .5px solid rgba(0,0,0, 0.245);
+    `
+const TBTop = styled.div`
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 
     .closeButton {
         height: 11px;
@@ -45,6 +52,34 @@ const WToolBar = styled.div`
         background-color: rgba(255, 78, 78, 1);
         border-radius: 50%;
         margin: 10px 0px 0px 10px;
+    }
+    .status {
+        margin: 10px 0px 0px 45%;
+    }
+`
+const TBBottom = styled.div`
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .searchInput {
+        color: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        border-radius: 4px;
+        z-index: 999;
+        margin: 0px 10px 0px 0px;
+        height: 50%;
+        width: 27%;
+        font-size: 12px;
+        -webkit-transition-property: all;
+        -webkit-transition-duration: .350s;
+        transition-property: all;
+        transition-duration: .350 s;
+    }
+    .searchInput:focus {
+        text-align: left;
     }
 `
 const WNav = styled.div`
@@ -73,7 +108,19 @@ class Sandbox extends Component {
 
                         <WToolBar>
 
-                            <div className="closeButton"></div>
+                            <TBTop>
+
+                                <div className="closeButton"></div>
+                                
+                                <div className="status">grantspell</div>
+                                
+                            </TBTop>
+
+                            <TBBottom>
+
+                                    <input className="searchInput" name="search" value="Search"></input>
+                                
+                            </TBBottom>
 
                         </WToolBar>
 
