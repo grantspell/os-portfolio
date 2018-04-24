@@ -10,34 +10,49 @@ import Contact from './windows/Contact'
 
 //STYLING
 const WindowsWrapper = styled.div`
-    height: 350px;
-    width: 500px;
-    border-radius: 5px;
+    height: 433px;
+    width: 770px;
+    border-radius: 4px;
     margin: 100px;
-    box-shadow: 0px 0px 100px rgba(0,0,0,.5);
+    box-shadow: 0px 20px 75px rgba(0,0,0,.5);
     font-family: 'Arimo', sans-serif;
 
-    @media (max-width: 1050px) {
-        height: 80%;
-        width: 95%;
+    @media (max-width: 1020px) {
+        height: 60vh;
+        width: 90vw;
         margin: 10px;
     }
 `
 const WindowTop = styled.div`
-    height: 35px;
+    height: 12.5%;
     width: 100%;
     border-radius: 5px 5px 0px 0px;
     background: linear-gradient(#EEEEEE, #D0D0D0);
     display: flex;
     align-items: center;
-    
+    `
+const WToolBar = styled.div`
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(#EDEDED, #D0D0D0);
+    border-radius: 4px 4px 0px 0px;
+    z-index: 998;
+    border-bottom: .5px solid rgba(0,0,0, 0.245);
+    `
+const TBTop = styled.div`
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
     .closeButton {
-        color: red;
-        background-color: red;
-        margin-left: 10px;
+        height: 11px;
+        width: 11px;
+        background-color: rgba(255, 78, 78, 1);
         border-radius: 50%;
-        width: 13px;
-        height: 13px;
+        margin: 0px 0px 0px 1%;
+        color: rgba(255, 78, 78, 1);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -46,36 +61,52 @@ const WindowTop = styled.div`
     .closeButton:hover {
         color: black;
     }
-    .Header {
-        width: 100%;
+    .status {
+        margin: 0px 0px 0px 45%;
+        width: 50%;
         display: flex;
-        flex-direction: columns;
-        justify-content: center;
         align-items: center;
     }
-    p {
-        font-size: 12px;
-        color: black;
-        text-align: center;
-        margin-left: 4px;
-    }
+`
+const TBBottom = styled.div`
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 
-    @media (max-width: 1050px) {
-        height: 5%;        
+    .searchInput {
+        color: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        border-radius: 4px;
+        z-index: 999;
+        margin: 0px 10px 0px 0px;
+        height: 50%;
+        width: 27%;
+        font-size: 12px;
+        -webkit-transition-property: all;
+        -webkit-transition-duration: .350s;
+        transition-property: all;
+        transition-duration: .350s;
     }
-    `
+    .searchInput:focus {
+        text-align: left;
+    }
+`
 const WindowBottom = styled.div`
     display: flex;
-    height: 95%;
+    height: 100%;
     width: 100%;
 `
 const WindowLeft = styled.div`
-    height: 315px;
-    width: 25%;
-    border-radius: 0px 0px 0px 5px;
-    background-color: rgba(240, 240, 240, .95);
     display: flex;
     flex-direction: column;
+    height: 87.5%;
+    width: 23%;
+    background-color: rgba(240, 240, 255, 0.675);    
+    border-radius: 0px 0px 0px 4px;
+    border-right: .5px solid rgba(0, 0, 0, 0.245);
+    z-index: 555;
 
     .appList {
         display: flex;
@@ -88,15 +119,14 @@ const WindowLeft = styled.div`
         margin: 0px 4px 0px 10px;
     }
 
-    @media (max-width: 1050px) {
-        height: 100%;
+    @media (max-width: 1020px) {
         width: 30%;
     }
 `
 const WindowRight = styled.div`
-    height: 315px;
-    width: 450px;
-    border-radius: 0px 0px 5px 0px;
+    height: 87.5%;
+    width: 77%;
+    border-radius: 0px 0px 4px 0px;
     background-color: #FFFFFF;
     flex-wrap: wrap;
     display: flex;
@@ -120,8 +150,7 @@ const WindowRight = styled.div`
         height: 70px;
     }
 
-    @media (max-width: 1050px) {
-        height: 100%;
+    @media (max-width: 1020px) {
         width: 70%;
     }
 `
@@ -152,18 +181,33 @@ const Windows = (props) => {
             onStart={this.handleStart}
             onDrag={this.handleDrag}
             onStop={this.handleStop}>
+
             <WindowsWrapper>
+
                 <WindowTop className="handle">
-                    <div className="closeButton" onClick={closeApplication}>
-                        x
-                </div>
-                    <div className="Header">
-                        <i class="material-icons">folder</i>
-                        <p>{props.appName}</p>
-                    </div>
+
+                    <WToolBar>
+
+                        <TBTop>
+
+                            <div className="closeButton" onClick={closeApplication}>x</div>
+
+                            <div className="status"><i className="icon" class="material-icons">folder</i><p>{props.appName}</p></div>
+
+                        </TBTop>
+
+                        <TBBottom>
+
+                            <input className="searchInput" name="search" value="Search"></input>
+
+                        </TBBottom>
+
+                    </WToolBar>
+
                 </WindowTop>
 
                 <WindowBottom>
+
                     <WindowLeft>
 
                         <div className="foldersLabel">
@@ -197,8 +241,11 @@ const Windows = (props) => {
                         {props.appName === "about" ? <About /> : props.appName === "projects" ? <Projects projects={props.projects} /> : props.appName === "archive" ? <Archive archives={props.archives} /> : props.appName === "contact" ? <Contact /> : null}
 
                     </WindowRight>
+
                 </WindowBottom>
+
             </WindowsWrapper>
+
         </Draggable>
     );
 }
